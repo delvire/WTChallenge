@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
+    <title>User informations</title>
+</head>
+<body>
+<h2>User informations</h2>
+<p th:number="'User id ' +${adduser.userid}"></p>
+<p th:text="'Name ' +${adduser.name}"></p>
+<p th:text ="'email address ' +${adduser.emailaddr}"/>
+<p th:text="'Organisation ' +${adduser.organisation}"/>
+<p th:text="'Start date (MMDDYYYY) ' + ${adduser.startdate}"/>
+<p th:text="'End date (MMDDYYYY) ' +${adduser.enddate}"/>
+<a href="/adduser">Add another user </a>
+<p><a href="/getstarted">Go back to the home page</a></p>
+</body>
+</html>
