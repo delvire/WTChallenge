@@ -21,6 +21,11 @@ public class MainController
     {
         return "index";
     }
+    @GetMapping("/home")
+    public String home()
+    {
+        return "index";
+    }
     @GetMapping("/getstarted")
     public String getStarted()
     {
@@ -36,6 +41,7 @@ public class MainController
     @PostMapping("/adduser") //user add
     public String productSubmit(@ModelAttribute("adduser") Users user, BindingResult bindingResult)
     {
+        NbDays result = new NbDays();
         if(bindingResult.hasErrors())
         {
             return "adduser";
