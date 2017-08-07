@@ -7,7 +7,7 @@
 <body>
 <h2>Enter your informations</h2>
 <form action="#" th:action="@{/adduser}" th:object="${adduser}" method="post">
-    <p>User Id  <input type="number" th:field ="*{userid}"/>
+    <p>User Id  <input type="text" th:field ="*{userid}"/>
         <span th:if="${#fields.hasErrors('userid')}" th:errors="*{userid}">Problem with "userid"</span></p>
     <p>Name  <input type="text" th:field="*{name}"/>
         <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Problem with "name"</span></p>
@@ -15,9 +15,9 @@
         <span th:if="${#fields.hasErrors('emailaddr')}" th:errors="*{emailaddr}">Problem with "emailaddr"</span></p>
     <p>Organisation  <input type="text" th:field="*{organisation}"/>
         <span th:if="${#fields.hasErrors('organisation')}" th:errors="*{organisation}">Problem with "organisation"</span></p>
-    <p>Start date (MMDDYYYY)  <input type="text" th:field ="*{startdate}"/>
+    <p>Start date (MM/DD/YYYY)  <input type="text" th:field ="*{startdate}"/>
         <span th:if="${#fields.hasErrors('startdate')}" th:errors="*{startdate}">Problem with "startdate"</span></p>
-    <p>End date (MMDDYYYY)  <input type="text" th:field="*{enddate}"/>
+    <p>End date (MM/DD/YYYY)  <input type="text" th:field="*{enddate}"/>
         <span th:if="${#fields.hasErrors('enddate')}" th:errors="*{enddate}">Problem with "enddate"</span></p>
     <p><input type="submit" value="Submit" /><input type="reset" value="Reset"/></p>
 </form>

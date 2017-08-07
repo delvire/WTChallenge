@@ -6,7 +6,7 @@
 </head>
 <body>
 <h2>Current Users in database</h2>
-<table border="2">
+<table border="1">
     <tr>
         <th>USER ID</th>
         <th>NAME</th>
@@ -16,7 +16,7 @@
         <th>END DATE</th>
     </tr>
     <tr th:each="user : ${userList}" >
-        <td th:number="${user.userid}"/>
+        <td th:text="${user.userid}"/>
         <td th:text="${user.name}"/>
         <td th:text="${user.emailaddr}"/>
         <td th:text="${user.organisation}"/>

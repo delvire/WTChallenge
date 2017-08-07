@@ -9,28 +9,26 @@ import javax.validation.constraints.Size;
 public class Users
 {
     @Id
-    @Size(min=2, max=50)
-    private long userid;
     @NotNull
-    @Size(min=2, max=200)
+    //@Size(min=2, max=50)
+    private String userid;
+    @NotNull
+    //@Size(min=2, max=200)
     private String name;
-    @Size(min=2, max=200)
+    //@Size(min=2, max=200)
     private String emailaddr;
-    @Size(min=2, max=200)
+    //@Size(min=2, max=200)
     private String organisation;
     @NotNull
-    @Size(min=8, max=8)
+    //@Size(min=10, max=10)
     private String startdate;
-    @Size(min=8, max=8)
+    //@Size(min=10, max=10)
     private String enddate;
 
 
-    public long getUserid()
-    {
-        return userid;
-    }
+    public String getUserid() { return userid; }
 
-    public void setUserid(long userid)
+    public void setUserid(String userid)
     {
         this.userid = userid;
     }
